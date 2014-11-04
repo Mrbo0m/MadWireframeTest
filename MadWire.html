@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<title>Fred Test.js app</title>
+		<style>canvas { width: 100%; height: 100% }</style>
+	</head>
+	<body>
+		<script src="js/three.min.js"></script>
+		<script>
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			document.body.appendChild(renderer.domElement);
+
+			 wire1 = new THREE.Mesh(
+    		  new THREE.BoxGeometry( 1, 1, 1 ),
+    		  new THREE.MeshBasicMaterial({color:0xFF6600, wireframe:true})
+ 			 );
+  
+ 			 scene.add( wire1 );
+
+ 			  wire2 = new THREE.Mesh(
+    		  new THREE.BoxGeometry( 2, 2, 2 ),
+    		  new THREE.MeshBasicMaterial({color:0xFF6600, wireframe:true})
+ 			 );
+  
+ 			 scene.add( wire2 );
+
+ 			  wire3 = new THREE.Mesh(
+    		  new THREE.BoxGeometry( 3, 3, 3 ),
+    		  new THREE.MeshBasicMaterial({color:0xFF6600, wireframe:true})
+ 			 );
+  
+ 			 scene.add( wire3 );
+
+ 			  wire4 = new THREE.Mesh(
+    		  new THREE.BoxGeometry( 4, 4, 4 ),
+    		  new THREE.MeshBasicMaterial({color:0xFF6600, wireframe:true})
+ 			 );
+  
+ 			 scene.add( wire4 );
+
+ 			  wire5 = new THREE.Mesh(
+    		  new THREE.BoxGeometry( 5, 5, 5 ),
+    		  new THREE.MeshBasicMaterial({color:0xFF6600, wireframe:true})
+ 			 );
+  
+ 			 scene.add( wire5 );
+
+ 			  wire6 = new THREE.Mesh(
+    		  new THREE.BoxGeometry( 6, 6, 6 ),
+    		  new THREE.MeshBasicMaterial({color:0xFF6600, wireframe:true})
+ 			 );
+  
+ 			 scene.add( wire6 );
+
+ 			  wire7 = new THREE.Mesh(
+    		  new THREE.BoxGeometry( 7, 7, 7 ),
+    		  new THREE.MeshBasicMaterial({color:0xFF6600, wireframe:true})
+ 			 );
+  
+ 			 scene.add( wire7 );
+
+ 			  wire8 = new THREE.Mesh(
+    		  new THREE.BoxGeometry( 8, 8, 8 ),
+    		  new THREE.MeshBasicMaterial({color:0xFF6600, wireframe:true})
+ 			 );
+  
+ 			 scene.add( wire8 );
+  
+   			 wire9 = new THREE.Mesh(
+    		  new THREE.BoxGeometry( 9, 9, 9 ),
+    		  new THREE.MeshBasicMaterial({color:0xFF6600, wireframe:true})
+ 			 );
+  
+ 			 scene.add( wire9 );
+
+			camera.position.z = 5;
+
+			var render = function () {
+				requestAnimationFrame(render);
+
+				wire1.rotation.x -= 0.00; /*Change Rotation Value here*/
+				wire1.rotation.y -= 0.09;
+
+				wire2.rotation.x -= 0.00; /*Change Rotation Value here*/
+				wire2.rotation.y -= 0.08;
+
+				wire3.rotation.x -= 0.00; /*Change Rotation Value here*/
+				wire3.rotation.y -= 0.07;
+
+				wire4.rotation.x -= 0.00; /*Change Rotation Value here*/
+				wire4.rotation.y -= 0.06;
+
+				wire5.rotation.x -= 0.00; /*Change Rotation Value here*/
+				wire5.rotation.y -= 0.05;
+
+				wire6.rotation.x -= 0.00; /*Change Rotation Value here*/
+				wire6.rotation.y -= 0.04;
+
+				wire7.rotation.x -= 0.00; /*Change Rotation Value here*/
+				wire7.rotation.y -= 0.03;
+
+				wire8.rotation.x -= 0.00; /*Change Rotation Value here*/
+				wire8.rotation.y -= 0.02;
+
+				wire9.rotation.x -= 0.00; /*Change Rotation Value here*/
+				wire9.rotation.y -= 0.01;
+
+				renderer.render(scene, camera);
+			};
+
+			render();
+		</script> n
+	</body>
+</html>
